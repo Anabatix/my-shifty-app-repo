@@ -1,0 +1,5 @@
+# This .gitignore file is intentionally minimal
+# to ensure node_modules is included in the commit.
+
+# Ignore npm debug logs
+npm-debug.log*
