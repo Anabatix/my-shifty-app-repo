@@ -4,11 +4,11 @@ FROM node:20-slim
 # Set the working directory in the container
 WORKDIR /usr/src/app
 
-# Copy package.json and package-lock.json
+# Copy package.json and the lock file
 COPY package*.json ./
 
-# Install app dependencies
-RUN npm install
+# Install dependencies using the lock file for consistency
+RUN npm ci
 
 # Bundle app source
 COPY . .
