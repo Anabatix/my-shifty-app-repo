@@ -4,16 +4,16 @@ FROM node:20-slim
 # Set the working directory in the container
 WORKDIR /usr/src/app
 
-# Copy package.json and the lock file
+# Copy the package.json file first.
 COPY package*.json ./
 
-# Install dependencies using the lock file for consistency
-RUN npm ci
+# Clean the cache and then install dependencies. This is more robust.
+RUN npm cache clean --force && npm install
 
-# Bundle app source
+# Bundle the rest of your app's source code
 COPY . .
 
-# Your app binds to port 8080 so you need to tell Docker about it
+# Tell Docker about the port your app uses
 EXPOSE 8080
 
 # Define the command to run your app
