@@ -1,0 +1,13 @@
+{
+  "name": "agent-shifty-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@google/genai": "^0.16.0",
+    "ws": "^8.18.0"
+  }
+}

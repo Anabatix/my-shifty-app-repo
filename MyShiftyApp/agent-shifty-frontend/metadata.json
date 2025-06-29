@@ -1,0 +1,8 @@
+{
+  "name": "Shifty v3 Live Audio Sunday 11am",
+  "description": "Experience real-time voice chat with a futuristic AI octopus assistant, with 3D visuals that react to your conversation.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "prompt": ""
+}
